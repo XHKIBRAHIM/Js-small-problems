@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chhota Sa Program</title>
+</head>
+<body>
+    <input type="text" id="itemInput">
+    <button onclick="addItem()">Add Item</button>
+    <ul id="todoList"></ul>
+
+    <script>
+        var todoList = [];
+
+        function addItem() {
+            var itemInput = document.getElementById("itemInput");
+            var newItem = itemInput.value;
+
+            if (newItem !== "") {
+                todoList.push(newItem);
+                itemInput.value = "";
+
+                var todoListElement = document.getElementById("todoList");
+                todoListElement.innerHTML += "<li>" + newItem + "</li>";
+            }
+        }
+    </script>
+</body>
+</html>

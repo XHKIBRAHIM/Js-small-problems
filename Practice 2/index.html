@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="dropdownMenu" onchange="displayMessage()">
+        <option value="">Select an option</option>
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+    <div id="displayDiv"></div>
+    <script>
+        function displayMessage() {
+            var selectOption = document.getElementById("dropdownMenu").value;
+            var message;
+               
+            switch (selectOption) {
+                case "option1":
+                message = "You selected Option 1.";
+                    break;
+
+                     case "option2":
+                message = "You selected Option 2.";
+                    break; 
+
+                    case "option3":
+                message = "You selected Option 3.";
+                    break;
+                  
+                default:
+                    message = "";
+                    break;
+            }
+            document.getElementById("displayDiv").innerText = message;
+        }
+//         var day = 2;
+// var dayName;
+
+// switch (day) {
+//     case 1:
+//         dayName = "Sunday";
+//         break;
+//     case 2:
+//         dayName = "Monday";
+//         break;
+//     case 3:
+//         dayName = "Tuesday";
+//         break;
+//     case 4:
+//         dayName = "Wednesday";
+//         break;
+//     case 5:
+//         dayName = "Thursday";
+//         break;
+//     case 6:
+//         dayName = "Friday";
+//         break;
+//     case 7:
+//         dayName = "Saturday";
+//         break;
+//     default:
+//         dayName = "Invalid day";
+//         break;
+// }
+
+// console.log(dayName);
+    </script>
+</body>
+</html>
